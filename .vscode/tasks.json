@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:\\Mingw64\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-w",
+                "-std=c++17",
+                "${workspaceFolder}/src/core/*.cpp",
+                "${workspaceFolder}/src/events/*.cpp",
+				"${workspaceFolder}/src/graphics/*.cpp",
+                "${workspaceFolder}/src/input/*.cpp",
+                "${workspaceFolder}/src/*.cpp",
+                "-o",
+                "${workspaceFolder}/build/sandbox.exe",
+                "-I${workspaceFolder}/include",
+                "-I${workspaceFolder}/vendor",
+                "-L${workspaceFolder}/lib",
+                "-lglfw3dll",
+                "-lglew32",
+                "-lopengl32"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\Mingw64\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
